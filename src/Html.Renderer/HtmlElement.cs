@@ -6,6 +6,9 @@ namespace Html.Renderer
 {
     public class HTMLElement
     {
+        public const char open = '<';
+        public const char close = '>';
+
         private readonly Page page;
 
         public string Text { get; set; }
@@ -38,7 +41,16 @@ namespace Html.Renderer
 
         private string Render_Internal(string text, Literal[] literals)
         {
-            return string.Empty;
+            string renderedText = text;
+
+            foreach (Literal literal in literals)
+            {
+                string replaceKey = open + literal.ID.ToString() + close;
+
+                renderedText = renderedText.Replace(replaceKey, literal.Element.Render());
+            }
+
+            return renderedText;
         }
 
         private Literal[] Parse_Literals(string text, List<HTMLElement> hTMLElements)
@@ -51,11 +63,11 @@ namespace Html.Renderer
 
             foreach (char c in text)
             {
-                if (!isOpenning && c == '{')
+                if (!isOpenning && c == open)
                 {
                     isOpenning = true;
                 }
-                else if (isOpenning && c == '}')
+                else if (isOpenning && c == close)
                 {
                     isOpenning = false;
 
