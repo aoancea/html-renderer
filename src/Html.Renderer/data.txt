@@ -1,0 +1,25 @@
+﻿<p>With the XMLHttpRequest object you can update parts of a web page, without reloading the whole page.</p>
+<p>The XMLHttpRequest object is used to exchange data with a server behind the scenes.<span>Hello Alex</span></p>
+
+[
+	{
+		"$type": 'paragraph'
+        'id': 'dc2dbcaf-0b75-492a-a412-310695db0880'
+		'text': 'With the XMLHttpRequest object you can update parts of a web page, without reloading the whole page.'
+	},
+	{
+		"$type": 'paragraph'
+        'id': '8b77c303-a334-4cc9-bb64-2f16acf4b322'
+		'text': 'The XMLHttpRequest object is used to exchange data with a server behind the scenes.{96e76d94-e075-462e-bb55-6f742fb92c50}'
+	},
+	{
+		"$type": 'span'
+		'id': '96e76d94-e075-462e-bb55-6f742fb92c50'
+		'text': 'Hello{e35fba3f-f936-47bb-9eca-bb3deb73501f}'
+	},
+	{
+		"$type": 'label'
+		'id': 'e35fba3f-f936-47bb-9eca-bb3deb73501f'
+		'text': ' Alex'
+	}
+]
