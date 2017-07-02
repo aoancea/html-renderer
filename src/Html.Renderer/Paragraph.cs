@@ -8,7 +8,9 @@
 
         public override string Render()
         {
-            return base.Render();
+            string renderedText = base.Render();
+
+            return "<p>" + renderedText + "</p>";
         }
     }
 }
