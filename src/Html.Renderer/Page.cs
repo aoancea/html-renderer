@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Html.Renderer
 {
@@ -25,7 +26,7 @@ namespace Html.Renderer
         {
             string text = string.Empty;
 
-            foreach (HTMLElement element in Elements)
+            foreach (HTMLElement element in Elements.Where(x => x.RenderInPage))
             {
                 text += element.Render(); // convert to StringBuilder
             }

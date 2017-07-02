@@ -14,6 +14,8 @@ namespace Html.Renderer
         public string Text { get; set; }
         public Guid ID { get; set; }
 
+        public bool RenderInPage { get; set; }
+
         public List<Literal> Literals { get; set; }
 
         public HTMLElement(Page page)
